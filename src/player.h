@@ -10,6 +10,7 @@ typedef struct {
 
 void player_create();
 void player_destroy();
+void player_draw();
 void player_update();
 
 #endif

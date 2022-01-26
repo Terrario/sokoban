@@ -15,6 +15,8 @@ int main(void)
         BeginDrawing();
             ClearBackground(BLACK);
 
+            player_draw();
+
             DrawFPS(0, 0);
         EndDrawing();
     }
