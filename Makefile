@@ -8,7 +8,8 @@ RMDIR=rm -rf
 SRC_DIR=src
 OUT_DIR=build
 
-OBJS=$(OUT_DIR)/sokoban.o
+OBJS=$(OUT_DIR)/player.o \
+	 $(OUT_DIR)/sokoban.o
 
 all: $(OUT_DIR) $(OBJS)
 	$(CC) $(OBJS) -o $(OUT_DIR)/sokoban $(LIBS)
