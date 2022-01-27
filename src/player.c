@@ -13,8 +13,8 @@ void player_create()
     p->rec = (Rectangle) {
         GetScreenWidth() / 2 - p->texture.width / 2,
         GetScreenHeight() / 2 - p->texture.height / 2,
-        128,
-        128
+        p->texture.width,
+        p->texture.height
     };
 }
 
@@ -42,8 +42,8 @@ void player_update()
 {
     Vector2 delta = { 0 };
 
-    delta.x = (IsKeyPressed(KEY_D) - IsKeyPressed(KEY_A)) * 128;
-    delta.y = (IsKeyPressed(KEY_S) - IsKeyPressed(KEY_W)) * 128;
+    delta.x = (IsKeyPressed(KEY_D) - IsKeyPressed(KEY_A)) * p->rec.width;
+    delta.y = (IsKeyPressed(KEY_S) - IsKeyPressed(KEY_W)) * p->rec.height;
 
     p->rec.x += delta.x;
     p->rec.y += delta.y;
